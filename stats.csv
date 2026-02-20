@@ -1,0 +1,12 @@
+stat_id,stat_name,abbreviation,value_type,value_sort,description
+2,C1 In Regulation,C1R,pct,desc,Percentage of holes in which at least C1 was reached in regulation. This also counts for C2 in Regulation
+3,C2 In Regulation,C2R,pct,desc,Percentage of holes in which at least C2 was reached in regulation.
+4,Parked,PKD,pct,desc,Percentage of holes in which a throw lands within the bullseye (3.3m from the target) in regulation. This also counts for C1 in Regulation and C2 in Regulation.
+7,C1X Putting,C1X,pct,desc,Percentage of putts made from within C1X.
+8,C2 Putting,C2P,pct,desc,Percentage of putts made from within C2.
+10,Birdie Rate,BRD,pct,desc,Percentage of holes in which a player made birdie or better.
+11,Double Bogey or Worse Percentage,DBL+,pct,asc,Percentage of holes in which a player made double bogey or worse.
+12,Bogey Percentage,BGY,pct,asc,Percentage of holes in which a player made bogey.
+13,Par Percentage,PAR,pct,desc,Percentage of holes in which a player made par.
+16,Putting - Total Distance,P:T,float,desc,The total distance of made putts within C1 or C2.
+18,Putting - Average,P:A,float,desc,The average distance of made putts within C1 or C2.

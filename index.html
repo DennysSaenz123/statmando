@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Player Profiles</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <nav>
+    <a href="index.html"><img src="images/logo-banner.png" alt="Statmando Logo"></a>
+    <ul>
+      <li style="background-color: #e20613;"><a href="">Live</a></li>
+      <li style="background-color: #f26522;"><a href="">Rankings</a></li>
+      <li style="background-color: darkred;" class="player-profiles" id="player-profiles">
+        <a href="#">Player Profiles</a>
+        <input type="text" id="player-search" placeholder="Search" />
+      </li>
+      <li style="background-color: #1a429a;"><a href="">Head-To-Head</a></li>
+      <li style="background-color: #662d91;"><a href="">Statzone</a></li>
+      <li><button class="more-button">More</button></li>
+    </ul>
+  </nav>
+
+  <section class="stats-table-section">
+    <h2>Player Table</h2>
+    <div id="players-table-container" class="table-container">
+      <div id="players-table"></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="py-8">
+      <ul class="x-4">
+        <li><img src="images/icons/x-twitter-brands.svg"> <a href="https://x.com/statmando/">@statmando</a></li>
+        <li><img src="images/icons/instagram-brands-solid.svg"> <a href="https://instagram.com/statmandodg/">@statmandodg</a></li>
+      </ul>
+    </div>
+    <div class="data-box">
+      <div class="flex flex-col justify-center align-middle space--2 space-y-2 bg-black text-white p-4">
+        <div class="text-xs uppercase">Data from</div>
+        <a target="_blank" href="https://www.pdga.com/" class="mx-auto">
+          <img src="images/pdga-logo.svg" class="w-16">
+        </a>
+      </div>
+    </div>
+    <div class="policy-links">
+      <div class="leading-normal">
+        <a href="https://pdga.com/tos">Terms of Use</a> |
+        <a href="https://pdga.com/privacy">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2021-2025 StatMando™, Professional Disc Golf Association
+    </div>
+  </footer>
+</body>
+</html>

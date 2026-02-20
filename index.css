@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+}
+
+nav {
+  background-color: #007a33;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+nav ul li {
+  margin: 5px;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#player-search {
+  margin-left: 10px;
+  padding: 5px;
+  border-radius: 4px;
+  border: none;
+}
+
+/* Main section for the player table */
+.stats-table-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+#players-table-container table {
+  width: 95%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#players-table-container thead {
+  background-color: #007a33;
+  color: white;
+}
+
+#players-table-container th {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+#players-table-container td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+#players-table-container tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  #players-table-container table {
+    font-size: 0.85rem;
+  }
+
+  #players-table-container th,
+  #players-table-container td {
+    padding: 10px;
+  }
+}
+
+/* Style default DataTables sorting icons */
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_desc:after {
+  font-family: 'Font Awesome 6 Free', Arial, sans-serif;
+  font-weight: 900;
+  margin-left: 8px;
+  color: #ffffff;
+  opacity: 0.7;
+}
+
+table.dataTable thead .sorting:after {
+  content: '\f0dc'; /* Font Awesome sort icon */
+}
+
+table.dataTable thead .sorting_asc:after {
+  content: '\f0de'; /* Sort up */
+}
+
+table.dataTable thead .sorting_desc:after {
+  content: '\f0dd'; /* Sort down */
+}
+
+/* Footer styling */
+footer {
+  background-color: #007a33;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+footer a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer ul.x-4 {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 0;
+  margin: 0 0 20px 0;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer ul.x-4 li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+footer ul.x-4 img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+footer .data-box img {
+  width: 60px;
+  height: auto;
+  margin-top: 10px;
+}

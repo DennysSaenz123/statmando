@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Player Profile</title>
+  <link href="player.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html"><img src="images/logo-banner.png" alt="Statmando Logo"></a>
+      <ul>
+        <li style="background-color: #e20613;"><a href="#">Live</a></li>
+        <li style="background-color: #f26522;"><a href="#">Rankings</a></li>
+        <li style="background-color: #007a33;" class="player-profiles">
+          <a href="#">Player Profiles</a>
+          <input type="text" id="player-search" placeholder="Search" />
+        </li>
+        <li style="background-color: #990000;"><a href="#">Monday</a></li>
+        <li style="background-color: #1a429a;"><a href="#">Head-To-Head</a></li>
+        <li style="background-color: #662d91;"><a href="#">Statzone</a></li>
+        <li><button class="more-button">More</button></li>
+      </ul>
+    </nav>
+
+    <section>
+      <div id="image-wrapper"></div>
+      <article>
+        <p class="name"><span id="player-name">Loading...</span></p>
+        <p class="lang"><span id="player-location"></span> <img class="flag" id="country-flag" src=""></p>
+        <p><strong>PDGA #:</strong> <span id="pdga-number"></span></p>
+        <p><strong>Division:</strong> <span id="division"></span></p>
+        <p><strong>Member Since:</strong> <span id="member-since"></span></p>
+        <div class="social-icons"></div>
+        <p class="sponsor"><img src="images/sponsors/Discraft.png"></p>
+        <p class="media"><img src="images/icons/camera-solid.svg"> 
+          <a href="#">Media appearances</a>
+        </p>
+      </article>
+      <div id="achievements-stats">
+        <div class="slot" id="slot1"></div>
+        <div class="slot" id="slot2"></div>
+        <div class="slot" id="slot3"></div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <ul id="slider">
+      <li><img src="images/ratingLineGraph.png" /></li>
+      <li><img src="images/cashedPieChart.png" /></li>
+      <li><img src="images/PodiumsBarChart.png" /></li>
+    </ul>
+  </main>
+
+  <div id="events-table-container" class="table-container">
+    <div id="events-table"></div>
+  </div>
+
+  <footer>
+    <div class="py-8">
+      <ul class="x-4">
+        <li><img src="images/icons/x-twitter-brands.svg"> <a href="https://x.com/statmando/">@statmando</a></li>
+        <li><img src="images/icons/instagram-brands-solid.svg"> <a href="https://instagram.com/statmandodg/">@statmandodg</a></li>
+      </ul>
+    </div>
+
+    <div class="data-box">
+      <div class="flex flex-col justify-center align-middle space--2 space-y-2 bg-black text-white p-4">
+        <div class="text-xs uppercase">Data from</div>
+        <a target="_blank" href="https://www.pdga.com/" class="mx-auto">
+          <img src="images/pdga-logo.svg" class="w-16">
+        </a>
+      </div>
+    </div>
+
+    <div class="policy-links">
+      <div class="leading-normal">
+        <a href="https://pdga.com/tos">Terms of Use</a> |
+        <a href="https://pdga.com/privacy">Privacy Policy</a>
+      </div>
+    </div>
+
+    <div class="copyright">
+      © 2021-2025 StatMando™, Professional Disc Golf Association
+    </div>
+  </footer>
+  <script src="player_profile_logic.js"></script>
+</body>
+</html>
