@@ -56,7 +56,7 @@ fetch('events.csv')
   .catch(err => console.error("Error loading events.csv", err));
 
 // Load and display players.csv
-fetch('players.csv')
+fetch('csv-files/players.csv')
   .then(response => response.text())
   .then(csvText => {
     const parsed = Papa.parse(csvText, { header: true });
