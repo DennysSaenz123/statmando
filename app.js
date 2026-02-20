@@ -14,6 +14,9 @@ app.get('/', (req, res) => {
     res.render('home');
 });
 
+app.get('/player/:id', (req, res) => {
+  res.render('player', { playerId: req.params.id });
+});
 
 // start listening to server
 app.listen(PORT, () => {

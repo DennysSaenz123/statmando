@@ -12,8 +12,10 @@ function showTable(type) {
   }
 }
 
-// Load and display events.csv
-fetch('events.csv')
+// ==========================
+// LOAD EVENTS
+// ==========================
+fetch('/csv-files/events.csv')
   .then(res => res.text())
   .then(csvText => {
     const parsed = Papa.parse(csvText, { header: true });
@@ -23,16 +25,19 @@ fetch('events.csv')
 
     const table = document.createElement('table');
     table.setAttribute('id', 'eventsTable');
+
     const thead = document.createElement('thead');
     const tbody = document.createElement('tbody');
 
     const headers = Object.keys(data[0]);
     const headerRow = document.createElement('tr');
+
     headers.forEach(header => {
       const th = document.createElement('th');
       th.textContent = header;
       headerRow.appendChild(th);
     });
+
     thead.appendChild(headerRow);
 
     data.forEach(row => {
@@ -52,11 +57,12 @@ fetch('events.csv')
     $(document).ready(function () {
       $('#eventsTable').DataTable();
     });
-  })
-  .catch(err => console.error("Error loading events.csv", err));
+  });
 
-// Load and display players.csv
-fetch('csv-files/players.csv')
+// ==========================
+// LOAD PLAYERS
+// ==========================
+fetch('/csv-files/players.csv')
   .then(response => response.text())
   .then(csvText => {
     const parsed = Papa.parse(csvText, { header: true });
@@ -66,37 +72,42 @@ fetch('csv-files/players.csv')
 
     const table = document.createElement('table');
     table.setAttribute('id', 'playersTable');
+
     const thead = document.createElement('thead');
     const tbody = document.createElement('tbody');
 
     const headers = Object.keys(data[0]);
     const headerRow = document.createElement('tr');
+
     headers.forEach(header => {
       const th = document.createElement('th');
       th.textContent = header;
       headerRow.appendChild(th);
     });
+
     thead.appendChild(headerRow);
 
     data.forEach(row => {
       const tr = document.createElement('tr');
+
       headers.forEach(header => {
         const td = document.createElement('td');
 
         if (header === 'pdga_number') {
-          td.innerHTML = `<a href="player.html?id=${row.pdga_number}">${row[header]}</a>`;
+          // ✅ FIXED LINK
+          td.innerHTML = `<a href="/player/${row.pdga_number}">${row[header]}</a>`;
         } else {
           td.textContent = row[header];
         }
 
         tr.appendChild(td);
       });
+
       tbody.appendChild(tr);
     });
 
     table.appendChild(thead);
     table.appendChild(tbody);
-
     document.getElementById('players-table').appendChild(table);
 
     $(document).ready(function () {
@@ -104,7 +115,6 @@ fetch('csv-files/players.csv')
     });
   })
   .catch(error => console.error('Error loading players.csv:', error));
-
 
 
   
